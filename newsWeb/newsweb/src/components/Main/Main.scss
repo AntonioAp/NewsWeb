@@ -1,0 +1,7 @@
+@import '../../Sass/mixins';
+
+
+.wrapper{
+    @include flex-column();
+
+}

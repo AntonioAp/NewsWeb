@@ -1,10 +1,33 @@
-import React    from "react";
-import template from "./Nav.jsx";
+import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
+import './Nav.scss';
 
-class Nav extends React.Component {
+
+export default class Nav extends Component {
   render() {
-    return template.call(this);
+    return (
+      <div>
+        <nav className="MainNav">
+          <div className="container">
+            <ul>
+              <li>
+              <Link to="/home">Inicio</Link>
+              </li>
+              <li>
+              <Link to="/form">Añadir noticia</Link>
+              </li>
+              <li>
+              <Link to="/list">Lista de noticias</Link>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    )
   }
 }
 
-export default Nav;
+
+
+
+

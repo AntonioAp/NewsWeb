@@ -1,0 +1,12 @@
+@import '../../Sass/mixins';
+
+footer{
+    @include flex-row();
+    background: rgb(161, 130, 247);
+    height: 6vh;
+    justify-content: baseline;
+    box-shadow: 5px 5px 15px 5px grey;
+}
+h5{
+    margin: 10px;
+}

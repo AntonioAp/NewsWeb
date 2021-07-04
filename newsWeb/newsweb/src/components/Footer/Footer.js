@@ -1,10 +1,15 @@
-import React    from "react";
-import template from "./Footer.jsx";
+import React, { Component } from 'react';
+import './Footer.scss'
 
-class Footer extends React.Component {
+
+export default class Footer extends Component {
   render() {
-    return template.call(this);
+    return (
+     <footer>
+       <h5>FOOTER   ------   Web creada con React</h5>
+     </footer>
+     )
   }
 }
 
-export default Footer;
+

@@ -1,10 +1,24 @@
-import React    from "react";
-import template from "./Main.jsx";
+import React, { Component } from 'react';
+import {Route, Switch} from 'react-router-dom';
+import Home from '../../pages/Home';
+import Form from '../../pages/Form';
+import List from '../../pages/List'
+import './Main.scss';
 
-class Main extends React.Component {
+export default class Main extends Component {
   render() {
-    return template.call(this);
+      return (
+          <main className='main'>
+              <div className="wrapper">
+                  <p>Esto es MAIN</p>
+                  <Switch>
+                      <Route path="/home" component={Home} exact />
+                      <Route path="/form" component={Form} />
+                      <Route path="/list" component={List} />
+                  </Switch>
+              </div>
+          </main>
+      )
   }
 }
 
-export default Main;

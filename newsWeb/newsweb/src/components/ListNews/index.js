@@ -1,2 +1,2 @@
-import ListNews from "./ListNews";
+import ListNews from './ListNews.js';
 export default ListNews;

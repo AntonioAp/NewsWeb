@@ -1,0 +1,32 @@
+@import '../../Sass/mixins';
+.container{
+    width: 100vw;
+    >ul{
+        list-style: none;
+        height: 6vh;
+        background: rgb(161, 130, 247);
+        box-shadow: 5px 5px 15px 5px grey;
+        border-radius: 20px;
+        @include flex-row-space-between;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 0px;
+        li{
+            text-indent: 0;
+            
+            a{
+                border-radius: 20px;
+                padding: 5px;
+                text-decoration: none;
+                color: rgb(12, 12, 12);
+                font-family: sans-serif;
+                font-weight: bold;
+                background: rgb(221, 201, 243);
+                
+                
+            }
+        }
+    }
+}
