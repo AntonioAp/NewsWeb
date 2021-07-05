@@ -46,7 +46,7 @@ class Home extends Component {
   render() {
     return (
       <div className="inputHome">
-        <h1>Bienvenido a la web </h1>
+        <h1>Bienvenid@ a la web </h1>
         <form onSubmit={this.handleSubmit}>
           <label>
             Nombre:
@@ -58,7 +58,7 @@ class Home extends Component {
           
           </userContext.Consumer> */}
         </form>
-        <p>Bienvenido {this.state.name || ".." } !!</p>
+        <p>Bienvenid@ {this.state.name || ".." } !!</p>
         {this.sendConfirm()}
         
         {/* <h2>Gracias, {this.state.register?this.state.register.user.name: ''}. Nos pondremos en contacto contigo</h2> */}

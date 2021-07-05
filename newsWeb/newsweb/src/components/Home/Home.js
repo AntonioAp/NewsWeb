@@ -50,7 +50,7 @@ class Home extends Component {
           </label>
             <button>Add</button>      
         </form>
-        <p>Usuario introducido: {this.state.name || ".." }</p>
+        <p>Usuari@ introducid@: {this.state.name || ".." }</p>
         {this.sendConfirm()}
         
         {/* <h2>Gracias, {this.state.register?this.state.register.user.name: ''}. Nos pondremos en contacto contigo</h2> */}
