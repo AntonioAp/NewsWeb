@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Home.scss";
 /* import { Link } from 'react-router-dom'; */
-import { userContext } from "../../context/userContext";
+//import { userContext } from "../../context/userContext";
 
 
 class Home extends Component {
@@ -52,12 +52,13 @@ class Home extends Component {
             Nombre:
             <input type="text" name="name" onChange={this.handleChange} />
           </label>
-          <userContext.Consumer>
+          <button>Add</button>   
+          {/* <userContext.Consumer>
             {({loginUser}) => <button type="submit" onClick= { () => loginUser(this.state.name)}>Add</button>}
           
-          </userContext.Consumer>
+          </userContext.Consumer> */}
         </form>
-        <p>Bienvenido: {this.state.name || ".." }</p>
+        <p>Bienvenido {this.state.name || ".." } !!</p>
         {this.sendConfirm()}
         
         {/* <h2>Gracias, {this.state.register?this.state.register.user.name: ''}. Nos pondremos en contacto contigo</h2> */}

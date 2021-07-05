@@ -4,8 +4,8 @@ import './NoticiaCard.scss'
 const NoticiaCard= ({article }) => {
     return (
         <div className='card'>
-            <p>{article.title}</p>
-            <p>{article.author}</p>
+            <p className="titulo">{article.title}</p>
+            <p className="autor">{article.author}</p>
             <p>{article.content}</p> 
             <img className="foto" src={article.urlToImage} alt=""/>
         </div>

@@ -6,7 +6,7 @@ export default class Footer extends Component {
   render() {
     return (
      <footer>
-       <h5>FOOTER   ------   Web creada con React</h5>
+       <h6>Web creada con React</h6>
      </footer>
      )
   }
