@@ -10,7 +10,7 @@ export default class Main extends Component {
       return (
           <main className='main'>
               <div className="wrapper">
-                  <p>Esto es MAIN</p>
+                  
                   <Switch>
                       <Route path="/home" component={Home} exact />
                       <Route path="/form" component={Form} />

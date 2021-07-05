@@ -1,10 +1,11 @@
 .container{
+    width:100vw;
 
     >.news-head{
         font-family: sans-serif;
         }
-    >.logo{
-        width: 136px;
-        height:104px;
-        }      
+        .logo{
+            width:100vw;
+        }
+    
 }

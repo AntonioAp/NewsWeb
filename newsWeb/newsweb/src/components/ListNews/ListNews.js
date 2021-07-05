@@ -1,56 +1,44 @@
-
-//import NoticiaCard from './NoticiaCard/NoticiaCard';
-import React, { Component } from 'react';
-import './ListNews.scss';
-import axios from 'axios';
-
-
+import NoticiaCard from "./NoticiaCard/NoticiaCard";
+import React, { Component } from "react";
+import "./ListNews.scss";
+import axios from "axios";
 
 class ListNews extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-      articles: []
+      data: "",
+      title: "",
+      author: "",
+      content: "",
+      urlToImage: "",
+      visible: false,
+      articles: [],
     };
-   }
-
-   componentDidMount() {
-
-    setTimeout(() => { 
-      axios.get(`https://newsapi.org/v2/top-headlines?country=us&category=business&pageSize=5&apiKey=c943630bf7ff4e3e812a9874864f71cc`)
-      .then(res => {
-        const articles = res.data;
-        console.log(res)
-        console.log(articles)
-        this.setState({ articles });
-      }) 
-    }, 3000);
   }
 
-paintCards = () => 
+  componentDidMount() {
+    axios
+      .get(
+        `https://newsapi.org/v2/top-headlines?country=us&category=business&pageSize=5&apiKey=c943630bf7ff4e3e812a9874864f71cc`
+      )
+      .then((res) => {
+        const{articles} = res.data;
+        console.log(articles)
+        this.setState({articles:[...this.state.articles, ...articles]});
+      });
+  }
 
-  this.state.articles.map(article => {
-    return (
-
-      <li>
-        {article.title},
-        {article.author},
-        {article.content}
-      </li>)
-    /*{ <NoticiaCard 
-      article={article} key={index}/>) }*/
-    })
-  
- 
-
+  paintCards = () => {
+      return this.state.articles.map((article, index) => <NoticiaCard article={article} key={index} />)
+  };
 
   render() {
-    return (
-      <div className="listnews">
-        {this.paintCards()}
-      </div>
-      
-    );
+    return <div className="listnews">
+      {
+        this.state.articles.length > 0 ? this.paintCards():<></>
+      }
+      </div>;
   }
 }
-export default ListNews; 
+export default ListNews;

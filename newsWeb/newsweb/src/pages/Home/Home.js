@@ -8,7 +8,7 @@ class Home extends Component {
   constructor(props){
     super(props);
     this.state = {
-      name: 'Antonio'
+      name: ''
       
     };
    }
@@ -45,7 +45,7 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
+      <div className="inputHome">
         <h1>Bienvenido a la web </h1>
         <form onSubmit={this.handleSubmit}>
           <label>

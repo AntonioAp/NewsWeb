@@ -7,7 +7,7 @@ export default class Nav extends Component {
   render() {
     return (
       <div>
-        <nav className="MainNav">
+        <nav className="mainNav">
           <div className="container">
             <ul>
               <li>

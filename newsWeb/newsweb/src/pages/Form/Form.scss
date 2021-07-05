@@ -5,11 +5,18 @@
     @include flex-column-center();
     >form{
         align-items: flex-start;
-        >input{
+        input{
             margin:10px;
             align-items:flex-start;
             flex-wrap: nowrap;
-
+            border-radius: 20px;
+        }
+        label{
+            font-weight: bold;
+            margin: 20px;
+        }
+        button{
+            margin:20px;
         }
 
     }

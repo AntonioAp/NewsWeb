@@ -1,13 +1,13 @@
 
 import React, { Component } from 'react';
 import './Home.scss';
-import { userContext } from "../../context/userContext";
+
 
 class Home extends Component {
   constructor(props){
     super(props);
     this.state = {
-      name: 'Antonio'
+      name: ''
       
     };
    }
@@ -42,16 +42,13 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
+      <div class="inputForm">
         <form onSubmit={this.handleSubmit}>
           <label>
             Nombre:
             <input type="text" name="name" onChange={this.handleChange} />
           </label>
-          <userContext.Consumer>
-            {({loginUser}) => <button type="submit" onClick= { () => loginUser(this.state.name)}>Add</button>}
-          
-          </userContext.Consumer>
+            <button>Add</button>      
         </form>
         <p>Usuario introducido: {this.state.name || ".." }</p>
         {this.sendConfirm()}

@@ -8,7 +8,7 @@ class Form extends Component {
 
   render() {
     return <div className='Form'>
-      aquí va las lista de 5 noticias de la api + las que se añadan
+      
     
     <ListNews/>
     </div>

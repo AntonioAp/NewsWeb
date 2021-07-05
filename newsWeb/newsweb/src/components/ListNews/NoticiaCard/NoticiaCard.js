@@ -1,12 +1,13 @@
 import React from 'react';
 import './NoticiaCard.scss'
 
-const NoticiaCard= (title,author,content) => {
+const NoticiaCard= ({article }) => {
     return (
         <div className='card'>
-            <p>{title}</p>
-            <p>{author}</p>
-            <p>{content}</p>     
+            <p>{article.title}</p>
+            <p>{article.author}</p>
+            <p>{article.content}</p> 
+            <img className="foto" src={article.urlToImage} alt=""/>
         </div>
     )
 }
